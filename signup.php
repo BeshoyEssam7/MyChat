@@ -8,12 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Create New Account</title>
 </head>
-
+<?php include_once('signup_user.php')?>
 <body>
     <div class="container">
 
         <div class="signup-form">
-            <form action="" method="post">
+            <form action="signup_user.php" method="post">
                 <div class="form-header">
                     <h2>Sign Up</h2>
                     <p>Fill out this form and start chating with your friends.</p>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group  ">
                     <label for="">Country</label>
-                    <select name="user_country " class="form-control" id="">
+                    <select name="user_country" class="form-control" id="">
                         <option value=""disabled >Select a Country</option>
                         <option value="Egypt">Egypt</option>
                         <option value="USA">USA</option>
@@ -51,7 +51,7 @@
 
                 <div class="form-group  ">
                     <label for="">Gender</label>
-                    <select name="user_gender " class="form-control"  id="">
+                    <select name="user_gender" class="form-control"  id="">
                         <option value=""disabled >Select your gender</option>
                         <option value="male">male</option>
                         <option value="female">female</option>
@@ -69,7 +69,7 @@
                 </div>
                  
                 <div class="form-group  ">
-                    <button type="submit" class="btn btn-primary btn-blocked btn-lg" name="sing_up">Sign Un</button>
+                    <button type="submit" class="btn btn-primary btn-blocked btn-lg" name="sign_up">Sign Up</button>
                 </div>
 
 

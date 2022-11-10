@@ -13,7 +13,7 @@
     <div class="container">
 
         <div class="signin-form">
-            <form action="" method="post">
+            <form action="signin_user.php" method="post">
                 <div class="form-header">
                     <h2>Sign In</h2>
                     <p>Login to MyChat</p>
