@@ -9,18 +9,42 @@ if(isset($_POST['sing_in'])){
 
     $select_user = "select * from users where user_email = '$email' and user_pass = '$pass'";
     $query = mysqli_query($conn,$select_user);
+
+
+    $user_data = mysqli_fetch_all($query,MYSQLI_ASSOC);
+    $_SESSION['user_id']=$user_data[0]['user_id'];
+
+
+
+
+
+
+
+
+
+
+
+
+
     $check_user= mysqli_num_rows($query);
     if($check_user==1){
         $_SESSION['user_email']=$email;
+     
         $update_msg= mysqli_query($conn,"UPDATE users  set log_in = 'Online' where user_email = '$email'");
         
         $user = $_SESSION['user_email'];
-        
+      
+      
         // $get_user = mysqli_fetch_all($query,MYSQLI_ASSOC);
         // $get_user=mysqli_fetch_array($query);
         $get_user=mysqli_fetch_assoc($query);
 
-        $user_name=$get_user["user_name"];
+        // $user_name=$get_user["user_name"];
+
+
+
+
+
         echo  "<script> window.open('home.php','_self')</script>";
 
 

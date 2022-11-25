@@ -37,7 +37,7 @@ if (!isset($_SESSION['user_email'])) {
         $friends_query = 'select * from users';
         $run_friends = mysqli_query($conn,$friends_query);
         $all_friends = mysqli_fetch_all($run_friends,MYSQLI_ASSOC);
-        print_r($all_friends);
+        // print_r($all_friends);
         ?>
 
         <?php search_user(); ?>

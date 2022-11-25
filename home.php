@@ -31,13 +31,15 @@ include_once('include/connection.php'); ?>
                 <div class="row">
                     <!-- getting the user information who is logged in  -->
                     <?php
+                   
                     $user = $_SESSION['user_email'];
+                  
                     $get_user = "select * from users WHERE user_email = '$user'";
                     $run_user = mysqli_query($conn, $get_user);
                     $row = mysqli_fetch_array($run_user);
                     $user_id = $row['user_id'];
                     $user_name = $row['user_name'];
-
+                  
 
                     ?>
 
@@ -65,7 +67,7 @@ include_once('include/connection.php'); ?>
                     ?>
                     <div class="col-md-12 right-header">
                         <div class="right-header-img">
-                            <img src="<?php echo $user_profile_image; ?>" width="20px" alt="">
+                            <img src="<?php echo $user_profile_image; ?>" width="50px" alt="">
                         </div>
                         <div class="right-header=detail">
                             <form method="post">
